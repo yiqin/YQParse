@@ -28,7 +28,7 @@
 @property(nonatomic, strong) NSDate *updatedAt;
 
 @property(nonatomic, strong) NSDictionary *responseJSON;        // save the data here.
-@property(nonatomic, strong) NSDictionary *pointerRelation;     //  Not Setup yet.
+@property(nonatomic, strong) NSDictionary *pointerRelation;
 
 - (void)saveInBackground;
 - (void)saveInBackgroundWithBlock:(void(^)(BOOL succeeded, NSError *error))block;
