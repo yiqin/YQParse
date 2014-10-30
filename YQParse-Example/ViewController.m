@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "YQParse.h"
 
 @interface ViewController ()
 
@@ -18,6 +19,17 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    YQParseObject *gameScore = [YQParseObject objectWithClassName:@"GameScore"];
+    [gameScore setValue:@1337 forKey:@"score"];
+    [gameScore setValue:@"Sean Plott" forKey:@"playerName"];
+    [gameScore setValue:@NO forKey:@"cheatMode"];
+    [gameScore saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            NSLog(@"succeed");
+        }
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning

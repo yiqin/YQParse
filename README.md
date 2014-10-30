@@ -12,7 +12,7 @@ YQParse is another Parse iOS SDK totally based on REST API. YQParse let you inte
 
 ---
 ## When and why YQParse is used
-For the most time, you don't need to use it. You just go to and download the official Parse iOS SDK. You probably need YQParse, only when you need to build your own static SDK, which requires a backend.
+For the most time, you don't need to use it. You just go to and download the official Parse iOS SDK. You probably need YQParse, only when you need to build your own static SDK which requires a backend.
 
 YQParse was first created at [MHacks IV](http://mhacks-iv.challengepost.com/) to support [Leaftagger](http://www.leaftagger.com/), which was a powerful framework to get feedback from users directly in the native iOS app. It ultimately enables developers to iterate and launch product quicker. Building a backend using Rails and Django on Heroku takes too much effect. So I chosed Parse.com and built YQParse.
 
@@ -42,6 +42,38 @@ Inside the `application:didFinishLaunchingWithOptions:`, we add
 [YQParse setApplicationId:@"RQ2gEXLcAxtOe0ZWOB57IaPERHOGfM9GopPH6brQ"
                restApiKey:@"uDcMX5Ce12M4yB2EpRUGeihAsPus7devAj7qskDB"];
 ```
+
+---
+## Objects
+### The YQParseObject
+
+
+### Saving Objects
+The interface is similar to a `NSMutableDictionary`, plus the `saveInBackground` method:
+```Objective-C
+YQParseObject *gameScore = [YQParseObject objectWithClassName:@"GameScore"];
+[gameScore setValue:@1337 forKey:@"score"];
+[gameScore setValue:@"Sean Plott" forKey:@"playerName"];
+[gameScore setValue:@NO forKey:@"cheatMode"];
+[gameScore saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+    if (succeeded) {
+        NSLog(@"succeed");
+    }
+    
+}];
+```
+
+### Retrieving Objects
+
+
+---
+## Queries 
+
+
+
+---
+## 
+
 
 ---
 
