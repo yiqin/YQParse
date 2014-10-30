@@ -7,12 +7,16 @@
 //
 
 #import "AppDelegate.h"
+#import "YQParse.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [YQParse setApplicationId:@"RQ2gEXLcAxtOe0ZWOB57IaPERHOGfM9GopPH6brQ"
+                   restApiKey:@"uDcMX5Ce12M4yB2EpRUGeihAsPus7devAj7qskDB"];
+    
     return YES;
 }
 							
