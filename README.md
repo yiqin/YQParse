@@ -45,10 +45,13 @@ Inside the `application:didFinishLaunchingWithOptions:`, we add
 
 ---
 ## Objects
-### The YQParseObject
+#### The YQParseObject
+Storing data on Parse is built around the `YQParseObject`. It's quite similar to `PFObject`. YQParseObject also has almost the same method.
+
+> Check out [PFObject Docs](https://parse.com/docs/ios_guide#top/iOS).
 
 
-### Saving Objects
+#### Saving Objects
 The interface is similar to a `NSMutableDictionary`, plus the `saveInBackground` method:
 ```Objective-C
 YQParseObject *gameScore = [YQParseObject objectWithClassName:@"GameScore"];
