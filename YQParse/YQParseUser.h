@@ -19,9 +19,6 @@
 
 + (instancetype) user;
 
-// No need;
-// - (void)signUpInBackgroundWithBlock:(void(^)(BOOL succeeded, NSError *error))block;
-
 - (void)validateWithSessionToken:(NSString*)sessionToken block:(void (^)(YQParseUser *user, NSError *error))block;
 
 @end
