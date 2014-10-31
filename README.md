@@ -80,7 +80,7 @@ YQParseQuery *query = [YQParseQuery queryWithClassName:@"GameScore"];
 ---
 ## Queries 
 
-### Basic Queries
+#### Basic Queries
 `YQParseQuery` let you to retrieve a list of objects rather than just a single object. The general pattern is to create a `YQParseQuery`, put conditions on it, and then retrieve a `NSArray` of matching `YQParseObject` using either `findObjectsInBackgroundWithBlock:`
 ```Objective-C
 YQParseQuery *query = [YQParseQuery queryWithClassName:@"GameScore"];
