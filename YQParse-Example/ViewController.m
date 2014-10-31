@@ -30,6 +30,12 @@
         }
     }];
     
+    YQParseQuery *query = [YQParseQuery queryWithClassName:@"GameScore"];
+    [query getObjectInBackgroundWithId:@"M2haZaceBp" block:^(YQParseObject *object, NSError *error) {
+        if (!error) {
+            NSLog(@"succeed. Return data: %@", [object objectForKey:@"playerName"]);
+        }
+    }];
     
 }
 

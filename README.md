@@ -28,9 +28,9 @@ You can simply drag the `YQParse` folser into your Xcode project.
 
 ---
 ## Initializing the SDK
-To start to use YQParse, you must fist initizlie it with your api id and REST api key.You can find them in your APIs settings on the your Parse account.
+To start to use YQParse, you must fist initizlie it with your API ID and REST API key.You can find them in your APIs settings on the your Parse account.
 
-> Note: Parse provides different api keys. Don't copy the wrong one. We need api id and REST api key.
+> Note: Parse provides different api keys. Don't copy the wrong one. We need API ID and REST API key.
 
 Open up your `AppDelegate.m` file and add the following import to the top of the file:
 ```Objective-C
@@ -67,7 +67,15 @@ YQParseObject *gameScore = [YQParseObject objectWithClassName:@"GameScore"];
 ```
 
 ### Retrieving Objects
-
+Retrieve the whole `YQParseObject` using a `YQParseQuery` with the `objectId`. 
+```Objective-C
+YQParseQuery *query = [YQParseQuery queryWithClassName:@"GameScore"];
+[query getObjectInBackgroundWithId:@"M2haZaceBp" block:^(YQParseObject *object, NSError *error) {
+    if (!error) {
+        NSLog(@"succeed. Return data: %@", [object objectForKey:@"playerName"]);
+    }
+}];
+```
 
 ---
 ## Queries 
