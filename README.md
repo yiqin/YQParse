@@ -66,7 +66,7 @@ YQParseObject *gameScore = [YQParseObject objectWithClassName:@"GameScore"];
 }];
 ```
 
-### Retrieving Objects
+#### Retrieving Objects
 Retrieve the whole `YQParseObject` using a `YQParseQuery` with the `objectId`. 
 ```Objective-C
 YQParseQuery *query = [YQParseQuery queryWithClassName:@"GameScore"];
@@ -80,7 +80,19 @@ YQParseQuery *query = [YQParseQuery queryWithClassName:@"GameScore"];
 ---
 ## Queries 
 
-
+### Basic Queries
+`YQParseQuery` let you to retrieve a list of objects rather than just a single object. The general pattern is to create a `YQParseQuery`, put conditions on it, and then retrieve a `NSArray` of matching `YQParseObject` using either `findObjectsInBackgroundWithBlock:`
+```Objective-C
+YQParseQuery *query = [YQParseQuery queryWithClassName:@"GameScore"];
+[query whereKey:@"playerName" equalTo:@"Sean Plott"];
+[query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+    if (!error) {
+        for (YQParseObject *object in objects) {
+            NSLog(@"objectId - %@", object.objectId);
+        }
+    }
+}];
+```
 
 ---
 ## 

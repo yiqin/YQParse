@@ -30,10 +30,22 @@
         }
     }];
     
+    /*
     YQParseQuery *query = [YQParseQuery queryWithClassName:@"GameScore"];
     [query getObjectInBackgroundWithId:@"M2haZaceBp" block:^(YQParseObject *object, NSError *error) {
         if (!error) {
             NSLog(@"succeed. Return data: %@", [object objectForKey:@"playerName"]);
+        }
+    }];
+    */
+    
+    YQParseQuery *query = [YQParseQuery queryWithClassName:@"GameScore"];
+    [query whereKey:@"playerName" equalTo:@"Sean Plott"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            for (YQParseObject *object in objects) {
+                NSLog(@"objectId - %@", object.objectId);
+            }
         }
     }];
     
