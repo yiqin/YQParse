@@ -11,7 +11,7 @@ YQParse is another Parse iOS SDK totally based on REST API. YQParse let you inte
 > Check out [Parse.com](https://parse.com/).
 
 ---
-## When and why YQParse is used
+## When and why to YQParse
 For the most time, you don't need to use it. You just go to and download the [official Parse iOS SDK](https://parse.com/apps/quickstart#parse_data/mobile/ios/native/existing). You probably need YQParse, only when you need to build your own static SDK which requires a backend.
 
 YQParse was first created at [MHacks IV](http://mhacks-iv.challengepost.com/) to support [Leaftagger](http://www.leaftagger.com/), which was a powerful framework to get feedback from users directly in the native iOS app. It ultimately enables developers to iterate and launch product quicker. Building a backend using Rails and Django on Heroku takes too much effect. So I chosed Parse.com and built YQParse.
