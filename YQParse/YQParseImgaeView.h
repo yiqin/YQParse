@@ -10,6 +10,9 @@
 #import "YQParseConstants.h"
 #import "YQParseRequestOperationManager.h"
 
+/*!
+ Nothing happens here.
+ */
 @interface YQParseImgaeView : UIImageView
 
 @property(nonatomic, strong) NSString *objectId;
