@@ -95,8 +95,47 @@ YQParseQuery *query = [YQParseQuery queryWithClassName:@"GameScore"];
 ```
 
 ---
-## 
+## Images
+Parse.com allow us to easily stroe images by converting them to `NSData` and then using `PFFile`. In Parse.com official SDK, we can use `PFImageView`. We don't use `PFImageView` here. I find that Parse.com would return the url of any file in the response data when it's using REST API. After we get that url, we will load the image with GET HTTP request. 
 
+#### Load Images
+This is a quick example about how to load images.
+```Objective-C
+#import "LeaftaggerObject.h"
+
+@interface LeaftaggerPage : LeaftaggerObject
+
+@property (nonatomic, strong) NSURL *imageURL;
+@property (nonatomic, strong) UIImageView *screenshotImageView;
+
+@end
+
+.
+.
+.
+
+- (void)setImageURL:(NSURL *)imageURL
+{
+    if (imageURL) {
+        _imageURL =imageURL;
+        [self updateFirstPageData];
+        
+        NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:imageURL];
+        
+        YQHTTPRequestOperation *requestOperation = [[YQHTTPRequestOperation alloc] initWithRequest:urlRequest];
+        requestOperation.responseSerializer = [YQImageResponseSerializer serializer];
+        [requestOperation setCompletionBlockWithSuccess:^(YQHTTPRequestOperation *operation, id responseObject) {
+            NSLog(@"Load image successfully.");
+            self.screenshotImageView = [[UIImageView alloc] initWithImage:responseObject];
+
+        } failure:^(YQHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"Image error: %@", error);
+
+        }];
+        [requestOperation start];
+    }
+}
+```
 
 ---
 
