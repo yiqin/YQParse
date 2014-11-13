@@ -14,6 +14,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    // Setup application id and rest api key here.
     [YQParse setApplicationId:@"RQ2gEXLcAxtOe0ZWOB57IaPERHOGfM9GopPH6brQ"
                    restApiKey:@"uDcMX5Ce12M4yB2EpRUGeihAsPus7devAj7qskDB"];
     
