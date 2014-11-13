@@ -20,6 +20,16 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    NSDictionary *dimensions = @{
+                                 @"priceRange": @"1000-1500",
+                                 @"source": @"cragslist",
+                                 @"dataType": @"weekday"
+                                 };
+    
+    [YQParseAnalytics trackEvent:@"search" dimensions:dimensions];
+    
+    
+    
     YQParseObject *gameScore = [YQParseObject objectWithClassName:@"GameScore"];
     [gameScore setValue:@1337 forKey:@"score"];
     [gameScore setValue:@"Sean Plott" forKey:@"playerName"];

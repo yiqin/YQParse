@@ -138,6 +138,29 @@ This is a quick example about how to load images.
 ```
 
 ---
+## Analytics
+
+
+#### App-Open Analytics
+YQParseAnaltyics allows you to track your application being launched.
+
+```Objective-C
+[YQParseAnalytics trackAppOpened];
+```
+
+#### Custom Analytics
+YQParseAnalytics also allows you to track free-form events, with a handful of string keys and values.
+```Objective-C
+NSDictionary *dimensions = @{
+                             @"priceRange": @"1000-1500",
+                             @"source": @"cragslist",
+                             @"dataType": @"weekday"
+                             };
+
+[YQParseAnalytics trackEvent:@"search" dimensions:dimensions];
+```
+
+---
 
 ## Contact & Maintainers
 
