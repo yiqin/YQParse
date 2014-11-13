@@ -27,6 +27,7 @@
 @property(nonatomic, strong) NSDate *createdAt;
 @property(nonatomic, strong) NSDate *updatedAt;
 
+/// All response data from Parse.com in REST API is here
 @property(nonatomic, strong) NSDictionary *responseJSON;        // save the data here.
 @property(nonatomic, strong) NSDictionary *pointerRelation;
 
