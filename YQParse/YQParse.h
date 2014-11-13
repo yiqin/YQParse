@@ -14,6 +14,8 @@
 #import "YQParseImgaeView.h"
 #import "YQParseRequestOperationManager.h"
 
+#import "YQParseAnalytics.h"
+
 @interface YQParse : NSObject
 
 + (void)setApplicationId:(NSString*)applicationId restApiKey:(NSString*)restApiKey;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D24C4C41A15560A0008AC10 /* YQParseAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D24C4C31A15560A0008AC10 /* YQParseAnalytics.m */; };
 		8D86D39A19DBA60C00375DF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D86D39919DBA60C00375DF8 /* Foundation.framework */; };
 		8D86D39C19DBA60C00375DF8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D86D39B19DBA60C00375DF8 /* CoreGraphics.framework */; };
 		8D86D39E19DBA60D00375DF8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D86D39D19DBA60D00375DF8 /* UIKit.framework */; };
@@ -49,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D24C4C21A15560A0008AC10 /* YQParseAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQParseAnalytics.h; sourceTree = "<group>"; };
+		8D24C4C31A15560A0008AC10 /* YQParseAnalytics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQParseAnalytics.m; sourceTree = "<group>"; };
 		8D86D39619DBA60C00375DF8 /* YQParse-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YQParse-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D86D39919DBA60C00375DF8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8D86D39B19DBA60C00375DF8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -217,6 +220,8 @@
 				8D86D3ED19DBA88800375DF8 /* YQParseRequestOperationManager.m */,
 				8D86D3EE19DBA88800375DF8 /* YQParseUser.h */,
 				8D86D3EF19DBA88800375DF8 /* YQParseUser.m */,
+				8D24C4C21A15560A0008AC10 /* YQParseAnalytics.h */,
+				8D24C4C31A15560A0008AC10 /* YQParseAnalytics.m */,
 			);
 			path = YQParse;
 			sourceTree = SOURCE_ROOT;
@@ -346,6 +351,7 @@
 			files = (
 				8D86D3F519DBA88800375DF8 /* YQURLConnectionOperation.m in Sources */,
 				8D86D3FB19DBA88800375DF8 /* YQParseObject.m in Sources */,
+				8D24C4C41A15560A0008AC10 /* YQParseAnalytics.m in Sources */,
 				8D86D3F719DBA88800375DF8 /* YQURLResponseSerialization.m in Sources */,
 				8D86D3F219DBA88800375DF8 /* YQHTTPSessionManager.m in Sources */,
 				8D86D3FC19DBA88800375DF8 /* YQParseQuery.m in Sources */,
