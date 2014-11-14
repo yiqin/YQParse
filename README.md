@@ -94,6 +94,29 @@ YQParseQuery *query = [YQParseQuery queryWithClassName:@"GameScore"];
 }];
 ```
 
+#### Queries Constraints
+If you want to retrieve objects matching several different values, you can use `whereKey:containedIn:`, providing an array of acceptable values. This is often useful to replace multiple queries with a single query. 
+```Objective-C
+NSArray *hashtagsResults = [results objectForKey:@"hashtags"];
+    
+YQParseQuery *query = [YQParseQuery queryWithClassName:@"Keywords"];
+[query whereKey:@"string" containedIn:hashtagsResults];
+[query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+    if (!error) {
+        if ([objects count]>0) {
+            int r = rand() % [objects count];
+            // Pick the first one now.
+            YQParseObject *object = [objects objectAtIndex:r];
+            NSLog(@"objectId - %@", object.objectId);
+            
+            NSDictionary *belongTo = [object.responseJSON objectForKey:@"belongTo"];
+            NSString *adObjectId = [belongTo objectForKey:@"objectId"];
+            [self loadAdImageWithObjectId:adObjectId];
+        }
+    }
+}];
+```
+
 ---
 ## Images
 Parse.com allow us to easily stroe images by converting them to `NSData` and then using `PFFile`. In Parse.com official SDK, we can use `PFImageView`. We don't use `PFImageView` here. I find that Parse.com would return the url of any file in the response data when it's using REST API. After we get that url, we will load the image with GET HTTP request. 

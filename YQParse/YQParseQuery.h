@@ -24,7 +24,7 @@
 - (void)findObjectsInBackgroundWithBlock:(void(^)(NSArray *objects, NSError *error))block;
 
 - (void)whereKey:(NSString*)constraintKey equalTo:(id)constraintValue;
-
+- (void)whereKey:(NSString *)constraintKey containedIn:(NSArray *)constraintValue;
 
 
 
