@@ -65,6 +65,16 @@ YQParseObject *gameScore = [YQParseObject objectWithClassName:@"GameScore"];
     
 }];
 ```
+```Swift
+var notification = YQParseObject(className: "Notification")
+notification.setValue(summaryTitle, forKey: "title")
+notification.setValue(summaryMessage, forKey: "message")
+notification.saveInBackgroundWithBlock({ (succeeded:Bool!, error:NSError!) -> Void in
+    if((succeeded) != nil){
+       println("succeed")
+    }
+})
+```
 
 #### Retrieving Objects
 Retrieve the whole `YQParseObject` using a `YQParseQuery` with the `objectId`. 
