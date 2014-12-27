@@ -54,6 +54,7 @@ Storing data on Parse is built around the `YQParseObject`. It's quite similar to
 #### Saving Objects
 The interface is similar to a `NSMutableDictionary`, plus the `saveInBackground` method:
 ```Objective-C
+// Objective-C
 YQParseObject *gameScore = [YQParseObject objectWithClassName:@"GameScore"];
 [gameScore setValue:@1337 forKey:@"score"];
 [gameScore setValue:@"Sean Plott" forKey:@"playerName"];
@@ -66,6 +67,7 @@ YQParseObject *gameScore = [YQParseObject objectWithClassName:@"GameScore"];
 }];
 ```
 ```Swift
+// Swift
 var notification = YQParseObject(className: "Notification")
 notification.setValue(summaryTitle, forKey: "title")
 notification.setValue(summaryMessage, forKey: "message")
