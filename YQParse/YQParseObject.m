@@ -24,10 +24,7 @@
     self = [super init];
     if (self) {
         self.parseClassName = parseClassName;
-        
-        // Do I need to init these properties????
         self.parameters = [[NSMutableDictionary alloc] init];
-        
         self.responseJSON = [[NSDictionary alloc] init];
         self.pointerRelation = [[NSDictionary alloc] init];
     }

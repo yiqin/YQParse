@@ -11,7 +11,7 @@
 #import "YQParseRequestOperationManager.h"
 
 /*!
- Nothing happens here.
+ Nothing happens here. No need to use this method now.
  */
 @interface YQParseImgaeView : UIImageView
 
